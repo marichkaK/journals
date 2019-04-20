@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AppController {
 
 	@RequestMapping("/")
-	String home(ModelMap modal) {
-		modal.addAttribute("title","CRUD Example");
+	public String home(ModelMap modal) {
+		modal.addAttribute("title","Journals App");
 		return "index";
 	}
 
 	@RequestMapping("/partials/{page}")
-	String partialHandler(@PathVariable("page") final String page) {
+	public String partialHandler(@PathVariable("page") final String page) {
 		return page;
 	}
 
